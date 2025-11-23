@@ -42,6 +42,11 @@ export class AudioEngine {
     audio.loop = true;
     audio.preload = 'auto';
 
+    // Handle audio loading errors gracefully
+    audio.addEventListener('error', (e) => {
+      console.warn(`Failed to load audio: ${source.audioPath}`, e);
+    });
+
     // Create audio nodes
     const sourceNode = this.audioContext.createMediaElementSource(audio);
     const gainNode = this.audioContext.createGain();

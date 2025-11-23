@@ -102,6 +102,16 @@ export default function Home() {
               Begin ATT Session
             </button>
 
+            {/* Setup link */}
+            <div className="mt-4 text-center">
+              <button
+                onClick={() => router.push('/setup')}
+                className="text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline"
+              >
+                📦 First time? Setup audio files →
+              </button>
+            </div>
+
             {/* Footer info */}
             <div className="mt-8 pt-8 border-t border-gray-200">
               <p className="text-sm text-gray-600 text-center">
